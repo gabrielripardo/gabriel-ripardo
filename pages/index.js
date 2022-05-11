@@ -1,22 +1,69 @@
 import Link from 'next/link';
 import { getPosts } from '../utils/mdx-utils';
-
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Layout, { GradientBackground } from '../components/Layout';
 import ArrowIcon from '../components/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
+import Image from 'next/image'
+// import {gabrielface} from '../assets/images/gabrielface. jpeg';
 
 export default function Index({ posts, globalData }) {
   return (
-    <Layout>
+    <div className="container">
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <Header name={globalData.name} />
-      <main className="w-full">
-        <h1 className="text-3xl lg:text-5xl text-center mb-12">
-          {globalData.blogTitle}
-        </h1>
+        <div className="borderGeneral"></div>      
+        <aside className="sidebar">
+          <section className="perfil">
+            <a href="/" >
+              <Image className="perfilImage" src='/assets/images/gabrielface.jpeg' alt="me" width="75" height="75" />
+            </a>
+            <h1 className="perfilTitles">
+              Gabriel Ripardo
+              <small>
+                Front-end Developer
+              </small>
+            </h1>
+            <p className="perfilDescription">
+              Escrevo sobre recursos de 
+              linguagens de programação, 
+              hacks que facilitam a vida,
+              javascript e música. 
+            </p>  
+          </section>
+          <section >
+            <nav>
+              <ul className="networks">
+                <li className="linkedin">
+                  <a href="https://www.linkedin.com/in/gabriel-sena-317a8412a/">
+                    <Image src="/assets/icons/linkedin.svg" alt="linkedin logo" width="25" height="25" />                  
+                  </a>
+                </li>
+                <li className="github">
+                  <a href="https://github.com/gabrielripardo">
+                  <Image src="/assets/icons/github.svg" alt="linkedin logo" width="25" height="25" />                  
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <nav>
+              <ul className="pagesLink">
+                <li>
+                  <a href="">Home</a>
+                </li>
+                <li>
+                  <a href="">Sobre mim</a>
+                </li>
+                <li>
+                  <a href="">Música</a>
+                </li>
+              </ul> 
+            </nav>
+          </section>
+        </aside>
+        <main className="main">
         <ul className="w-full">
           {posts.map((post) => (
             <li
@@ -46,16 +93,7 @@ export default function Index({ posts, globalData }) {
           ))}
         </ul>
       </main>
-      <Footer copyrightText={globalData.footerText} />
-      <GradientBackground
-        variant="large"
-        className="fixed top-20 opacity-40 dark:opacity-60"
-      />
-      <GradientBackground
-        variant="small"
-        className="absolute bottom-0 opacity-20 dark:opacity-10"
-      />
-    </Layout>
+    </div>
   );
 }
 

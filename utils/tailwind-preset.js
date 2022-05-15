@@ -23,6 +23,7 @@ const themesConfig = plugin(function ({ addComponents }) {
 
   cssVars['--font-primary'] = FONT_THEMES[FONT_PRIMARY];
   cssVars['--font-secondary'] = FONT_THEMES[FONT_SECONDARY];
+  cssVars['--bg-primary'] = '#040d21';
 
   const themeCompiled = {
     '.theme-compiled': cssVars,

@@ -1,12 +1,10 @@
 $color-primary: orange;	
-$bg-default: #040d21;
 
-.container {
+.content {
   min-height: 100vh;    
-  display: flex;        
+  display: flex;          
   font-family: sans-serif;
-  color: #d5d5d5;
-  background-color: $bg-default;    
+  color: #d5d5d5;  
 
   .borderGeneral {
     width: 100vw;
@@ -16,7 +14,7 @@ $bg-default: #040d21;
     z-index: 4;      
   }
 
-  .main {
+  .main {    
     padding: 10px 0.3rem 0px 20.3rem;
     flex: 1;
     display: flex;
@@ -244,9 +242,9 @@ $bg-default: #040d21;
   margin-left: 0.5rem;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-}
+// @media (max-width: 600px) {
+//   .grid {
+//     width: 100%;
+//     flex-direction: column;
+//   }
+// }

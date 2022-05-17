@@ -13,7 +13,7 @@ import ArrowIcon from '../../components/ArrowIcon';
 import CustomLink from '../../components/CustomLink';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
-import Layout, { GradientBackground } from '../../components/Layout';
+import LayoutDefault, { GradientBackground } from '../../components/LayoutDefault';
 import SEO from '../../components/SEO';
 
 // Custom components/renderers to pass to MDX.
@@ -36,7 +36,7 @@ export default function PostPage({
   globalData,
 }) {
   return (
-    <Layout>
+    <LayoutDefault>
       <SEO
         title={`${frontMatter.title} - ${globalData.name}`}
         description={frontMatter.description}
@@ -94,7 +94,7 @@ export default function PostPage({
         variant="small"
         className="absolute bottom-0 opacity-20 dark:opacity-10"
       />
-    </Layout>
+    </LayoutDefault>
   );
 }
 

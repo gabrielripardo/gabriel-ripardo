@@ -1,7 +1,10 @@
 import Layout from "../../components/Layout"
+import SEO from "../../components/SEO"
+
 export default function About() {
     return (
-        <Layout>
+        <Layout>            
+            <SEO title="About me" />
             <article className="p-14 font-large">
                 <h1>Sobre mim</h1>
                 <p>&quot;Desde cedo se aventurando com os computers né&quot;. Assim dizia meu tio, o principal responsável pela minha entrada nesse mundo da tecnologia. </p>

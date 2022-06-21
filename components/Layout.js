@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Aside from "./Aside"
 import ArrowIcon from '../components/ArrowIcon';
-import { MenuIcon } from '@styled-icons/heroicons-outline/Menu'
 export default function Layout({ children }) {
   const [open, setOpen] = useState(false);
 

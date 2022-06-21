@@ -2,33 +2,24 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Aside from "./Aside"
 import ArrowIcon from '../components/ArrowIcon';
-
+import { MenuIcon } from '@styled-icons/heroicons-outline/Menu'
 export default function Layout({ children }) {
-  const [style, setStyle] = useState('sidebar');
   const [open, setOpen] = useState(false);
 
   const handleClickMenu = () => {
-    setOpen(!open);
-    changeClass();
-  }
-
-  const changeClass = () => {
     console.log('# open: ', open)
-    if (open) {
-      setStyle('sidebar menu');
-    } else {
-      setStyle('sidebar');
-    }
-
+    setOpen(!open);
   }
+
   return (
     <div className="content">
       <div className="borderGeneral"></div>
-      <Aside styleClasses={style} />
+      <Aside open={open} />
       <main className="main">
         {children}
       </main>
       <aside className="menu-options">
+        {/* <MenuIcon /> */}
         <button onClick={handleClickMenu}>
           Abrir Menu
         </button>

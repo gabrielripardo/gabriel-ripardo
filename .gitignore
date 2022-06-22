@@ -37,3 +37,5 @@ yarn-error.log*
 .netlify
 package.json
 yarn.lock
+.env
+yarn.lock
